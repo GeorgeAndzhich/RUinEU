@@ -8,7 +8,7 @@ import android.widget.TextView
 import kotlin.math.absoluteValue
 import kotlin.reflect.typeOf
 
-var input = R.id.editTextNumber
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,16 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val button = findViewById<Button>(R.id.button)
         var result = findViewById<TextView>(R.id.textView)
-        val input = findViewById<EditText>(R.id.editTextNumber)
+        var input = findViewById<EditText>(R.id.editTextNumber)
 
         button.setOnClickListener{
-           Convert()
+          var Rubles = input.getText().toString().toInt()
+          var Converted = Rubles / 88
+          result.setText(Converted.toString())
         }
-    }
-
-    private fun Convert() {
-        TODO("Not yet implemented")
-
     }
 }
 
