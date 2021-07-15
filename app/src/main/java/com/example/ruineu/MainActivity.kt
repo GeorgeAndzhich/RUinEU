@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import kotlin.math.absoluteValue
 import kotlin.reflect.typeOf
 
@@ -17,11 +18,15 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         var result = findViewById<TextView>(R.id.textView)
         var input = findViewById<EditText>(R.id.editTextNumber)
-
         button.setOnClickListener{
-          var Rubles = input.getText().toString().toInt()
-          var Converted = Rubles / 88
-          result.setText(Converted.toString())
+            var Rubles = input.getText().toString().toInt()
+            if (Rubles <= 0){
+                Toast.makeText(this,"Введите значения больше нуля",Toast.LENGTH_SHORT).show()
+            }
+            else {
+                var Converted = Rubles / 88
+                result.setText(Converted.toString())
+            }
         }
     }
 }
