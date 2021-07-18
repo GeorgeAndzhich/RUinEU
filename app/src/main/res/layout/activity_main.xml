@@ -44,7 +44,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.391" />
+        app:layout_constraintVertical_bias="0.391"
+        android:textColor="#35DE1F"
+        android:textSize="35dp"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+       android:textStyle="bold"/>
 
     <Button
         android:id="@+id/button"
