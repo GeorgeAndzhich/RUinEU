@@ -15,7 +15,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.095"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -26,6 +29,9 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -42,11 +48,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="Button"
+        android:layout_width="73dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/custom_button"
+        android:text="Convert"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 

@@ -19,13 +19,14 @@ class MainActivity : AppCompatActivity() {
         var result = findViewById<TextView>(R.id.textView)
         var input = findViewById<EditText>(R.id.editTextNumber)
         button.setOnClickListener{
-            var Rubles = input.getText().toString().toInt()
+            var Rubles = input.getText().toString().toDouble()
             if (Rubles <= 0){
-                Toast.makeText(this,"Введите значения больше нуля",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Enter the value bigger than 0!",Toast.LENGTH_SHORT).show()
             }
             else {
-                var Converted = Rubles / 88
-                result.setText(Converted.toString())
+                var Converted = Rubles / 88.0
+                var rounded = String.format("%.2f",Converted)
+                result.setText(rounded)
             }
         }
     }
